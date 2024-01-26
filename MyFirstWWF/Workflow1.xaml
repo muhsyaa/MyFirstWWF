@@ -43,32 +43,32 @@
         </FlowDecision.Condition>
         <FlowDecision.True>
           <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_1">
-            <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="It's Weekend bro :)" />
+            <WriteLine DisplayName="WeekendMsg" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="It's Weekend bro :)" />
           </FlowStep>
         </FlowDecision.True>
         <FlowDecision.False>
           <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_5">
-            <If sap2010:WorkflowViewState.IdRef="If_1">
+            <If DisplayName="IfWorkDays" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
                   <mca:CSharpValue x:TypeArguments="x:Boolean">DateTime.Now.Hour &gt;= 12 &amp;&amp; DateTime.Now.Hour &lt; 13</mca:CSharpValue>
                 </InArgument>
               </If.Condition>
               <If.Then>
-                <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Time to go for lunch" />
+                <WriteLine DisplayName="LunchMsg" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Time to go for lunch" />
               </If.Then>
               <If.Else>
-                <If sap2010:WorkflowViewState.IdRef="If_2">
+                <If DisplayName="ifNotInLunchTime" sap2010:WorkflowViewState.IdRef="If_2">
                   <If.Condition>
                     <InArgument x:TypeArguments="x:Boolean">
                       <mca:CSharpValue x:TypeArguments="x:Boolean">DateTime.Now.Hour &lt; 12</mca:CSharpValue>
                     </InArgument>
                   </If.Condition>
                   <If.Then>
-                    <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="Need to wait, not yet lunchtime" />
+                    <WriteLine DisplayName="BeforeLunchMsg" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="Need to wait, not yet lunchtime" />
                   </If.Then>
                   <If.Else>
-                    <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="The lunch time is over" />
+                    <WriteLine DisplayName="AfterLunchMsg" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="The lunch time is over" />
                   </If.Else>
                 </If>
               </If.Else>
@@ -80,7 +80,7 @@
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
-    <sads:DebugSymbol.Symbol>dzpEOlxXT1JLXENDTlxTdHVkeVxXV0ZcTXlGaXJzdFdXRlxNeUZpcnN0V1dGXFdvcmtmbG93MS54YW1sDiYDVA8CAQEqCyqlAQIBDjMNSxICAQQuDS5jAgECNhM2kQECAQU6ETpoAgEMPRFJFgIBBi5LLmACAQM6TzplAgENQBdAbwIBB0QVRHcCAQpHFUduAgEIRFNEdAIBC0dTR2sCAQk=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>dzpEOlxXT1JLXENDTlxTdHVkeVxXV0ZcTXlGaXJzdFdXRlxNeUZpcnN0V1dGXFdvcmtmbG93MS54YW1sDiYDVA8CAQEqCyqlAQIBDjMNSxICAQQuDS58AgECNhM2kQECAQU6ETp/AgEMPRFJFgIBBi5kLnkCAQM6Zjp8AgENQBdAbwIBB0QVRJQBAgEKRxVHigECAQhEcESRAQIBC0dvR4cBAgEJ</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -103,7 +103,7 @@
       <sap2010:ViewStateData Id="WriteLine_6" sap:VirtualizedContainerService.HintSize="210,62" />
       <sap2010:ViewStateData Id="WriteLine_7" sap:VirtualizedContainerService.HintSize="210,62" />
       <sap2010:ViewStateData Id="If_2" sap:VirtualizedContainerService.HintSize="464,214" />
-      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="200,52">
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="699,366">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
